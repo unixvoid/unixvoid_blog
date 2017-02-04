@@ -4,6 +4,7 @@ go:
   - 1.6
 
 install:
+  - update-ca-certificates
   - make build_travis
   - make travisaci
 
