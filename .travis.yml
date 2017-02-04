@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - 1.6
+
+install:
+  - make build_travis
+  - make travisaci
+
+after_success:
+  - curl -d sec=$BINDER_SEC -d key=unixvoid.pub https://cryo.unixvoid.com/getfile --output unixvoid.pub
+  - curl -d sec=$BINDER_SEC -d key=unixvoid.sec https://cryo.unixvoid.com/getfile --output unixvoid.sec
+  - mv unixvoid_blog.aci unixvoid_blog-latest-linux-amd64.aci
+  - cp deps/sign.sh . && chmod +x sign.sh
+  - ./sign.sh $GPG_SEC
+  - curl -i --form sec=$BINDER_SEC --form file=@unixvoid_blog-latest-linux-amd64.aci --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload
+  - curl -i --form sec=$BINDER_SEC --form file=@unixvoid_blog-latest-linux-amd64.aci.asc --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload

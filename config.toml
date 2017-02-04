@@ -1,0 +1,28 @@
+baseurl = "/"
+title = "/dev/null"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+#disqusShortname = "unixvoid"
+
+
+[Author]
+    name = "Matthew Faltys"
+    bio = "Infrastructure Engineer. Writes a lot of DNS based infrastructure code"
+    avatar = "https://bitnuke.io/Qei8dT"
+
+
+[Params]
+    subtitle = "path to the void"
+    description = "Open source infrastructure for the rest of us"
+    opengraph = true
+    leftsidebar = false
+    authorbox = true
+    post_navigation = true
+
+
+[Params.widgets]
+    search = true # Enable "Search" widget
+    recent_articles = true # Enable "Recent arcticles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
