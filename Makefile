@@ -37,7 +37,7 @@ aci:	build
 		mv unixvoid_blog.aci ../
 	@echo "unixvoid_blog.aci built"
 
-travisaci:	build
+travisaci:
 	mkdir -p stage.tmp/unixvoid_blog-layout/rootfs/cryo/data/
 	mkdir -p stage.tmp/unixvoid_blog-layout/rootfs/cryo/conf/
 	cp deps/manifest.json stage.tmp/unixvoid_blog-layout/manifest
