@@ -3,8 +3,10 @@ language: go
 go:
   - 1.6
 
+sudo: required
+
 install:
-  - update-ca-certificates
+  - sudo update-ca-certificates
   - make build_travis
   - make travisaci
 
