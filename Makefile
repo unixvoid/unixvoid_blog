@@ -1,6 +1,6 @@
 .PHONY: themes
 
-all: clean
+all: travisaci
 
 build:
 	hugo
