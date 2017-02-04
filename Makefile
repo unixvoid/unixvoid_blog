@@ -1,6 +1,6 @@
 .PHONY: themes
 
-all: build
+all: clean
 
 build:
 	hugo
