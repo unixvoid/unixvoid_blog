@@ -31,6 +31,7 @@ aci:	build
 	chmod +x nginx-latest-linux-amd64
 	mv nginx-latest-linux-amd64 stage.tmp/unixvoid_blog-layout/rootfs/bin/nginx
 	cp deps/nginx.conf stage.tmp/unixvoid_blog-layout/rootfs/cryo/conf/
+	cp deps/mime.types stage.tmp/unixvoid_blog-layout/rootfs/cryo/conf/
 	cp -R public/* stage.tmp/unixvoid_blog-layout/rootfs/cryo/data/
 	cd stage.tmp/ && \
 		actool build unixvoid_blog-layout unixvoid_blog.aci && \
@@ -46,6 +47,7 @@ travisaci:
 	chmod +x nginx-latest-linux-amd64
 	mv nginx-latest-linux-amd64 stage.tmp/unixvoid_blog-layout/rootfs/bin/nginx
 	cp deps/nginx.conf stage.tmp/unixvoid_blog-layout/rootfs/cryo/conf/
+	cp deps/mime.types stage.tmp/unixvoid_blog-layout/rootfs/cryo/conf/
 	cp -R public/* stage.tmp/unixvoid_blog-layout/rootfs/cryo/data/
 	wget https://github.com/appc/spec/releases/download/v0.8.7/appc-v0.8.7.tar.gz
 	tar -zxf appc-v0.8.7.tar.gz
