@@ -20,7 +20,7 @@
         "user": "root",
         "group": "root",
         "exec": [
-            "/nginx"
+            "/bin/nginx"
         ],
         "ports": [
         {
