@@ -1,0 +1,11 @@
+[Unit]
+Description=unxivoid_blog
+
+[Service]
+ExecStart=/usr/bin/rkt run \
+	--port=web:80 \
+	--debug \
+        unixvoid.com/unixvoid_blog
+
+[Install]
+WantedBy=multi-user.target
