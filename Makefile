@@ -12,6 +12,7 @@ build_travis: themes
 	./hugo
 
 themes:
+	mkdir -p themes/
 	git clone https://github.com/Vimux/Mainroad/
 	mv Mainroad themes/mainroad
 
