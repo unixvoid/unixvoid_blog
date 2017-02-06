@@ -19,6 +19,8 @@ after_success:
   - curl -i --form sec=$BINDER_SEC --form file=@unixvoid_blog-latest-linux-amd64.aci --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload
   - curl -i --form sec=$BINDER_SEC --form file=@unixvoid_blog-latest-linux-amd64.aci.asc --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload
   - make travis_cp
+  - pwd
+  - ls -alh
   - ls -alh target/
   - curl -i --form sec=$BINDER_SEC --form file=@`ls target/*.aci` --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload
   - curl -i --form sec=$BINDER_SEC --form file=@`ls target/*.asc` --form path=rkt/unixvoid_blog/ https://cryo.unixvoid.com/upload
