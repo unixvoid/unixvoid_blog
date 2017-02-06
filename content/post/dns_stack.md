@@ -1,7 +1,7 @@
 +++
 description = ""
 title = "Production DNS Stack"
-thumbnail = "https://bitnuke.io/C68S0T"
+thumbnail = "https://s3.amazonaws.com/unixvoid-blog/office-small.jpg"
 tags = ["dns"]
 categories = []
 date = "2017-02-01T14:07:18-06:00"
