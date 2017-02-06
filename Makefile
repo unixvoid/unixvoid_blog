@@ -60,7 +60,10 @@ travisaci:
 	cp unixvoid_blog.aci target/unixvoid_blog-$(GIT_HASH)-linux-amd64.aci
 	cp deps/sign.sh target/
 	chmod +x target/sign.sh
-	cd target/ && ./sign.sh $GPG_SEC
+	cd target/ && \
+		curl -d sec=$BINDER_SEC -d key=unixvoid.pub https://cryo.unixvoid.com/getfile --output unixvoid.pub && \
+		curl -d sec=$BINDER_SEC -d key=unixvoid.sec https://cryo.unixvoid.com/getfile --output unixvoid.sec && \
+		./sign.sh $GPG_SEC
 
 clean:
 	rm -rf stage.tmp/
