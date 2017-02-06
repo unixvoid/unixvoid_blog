@@ -16,6 +16,7 @@ themes:
 	mkdir -p themes/
 	git clone https://github.com/Vimux/Mainroad/
 	mv Mainroad themes/mainroad
+	#sed -i -e 's/e64946/5f46e6/g' themes/mainroad/static/css/style.css
 
 localdev:
 	hugo server --buildDrafts
