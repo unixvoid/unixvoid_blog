@@ -59,7 +59,7 @@ travisaci:
 
 travis_cp:
 	mkdir target/
-	cp unixvoid_blog.aci target/
+	cp unixvoid_blog-latest-linux-amd64.aci target/unixvoid_blog.aci
 	cp deps/sign_alt.sh target/sign.sh
 	chmod +x target/sign.sh
 	cp unixvoid.pub target/
