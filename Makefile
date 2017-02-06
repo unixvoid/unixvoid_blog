@@ -56,13 +56,15 @@ travisaci:
 		../appc-v0.8.7/actool build unixvoid_blog-layout unixvoid_blog.aci && \
 		mv unixvoid_blog.aci ../
 	@echo "unixvoid_blog.aci built"
+
+travis_cp:
 	mkdir target/
-	cp unixvoid_blog.aci target/unixvoid_blog-$(GIT_HASH)-linux-amd64.aci
-	cp deps/sign.sh target/
+	cp unixvoid_blog.aci target/
+	cp deps/sign_alt.sh target/sign.sh
 	chmod +x target/sign.sh
+	cp unixvoid.pub target/
+	cp unixvoid.sec target/
 	cd target/ && \
-		curl -d sec=$BINDER_SEC -d key=unixvoid.pub https://cryo.unixvoid.com/getfile --output unixvoid.pub && \
-		curl -d sec=$BINDER_SEC -d key=unixvoid.sec https://cryo.unixvoid.com/getfile --output unixvoid.sec && \
 		./sign.sh $GPG_SEC
 
 clean:

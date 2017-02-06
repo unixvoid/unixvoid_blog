@@ -1,8 +1,10 @@
  #!/bin/bash
+ GIT_HASH=$(shell git rev-parse HEAD | head -c 10)
+
  echo $1 | gpg \
 	--passphrase-fd 0 \
 	--batch --yes \
 	--no-default-keyring --armor \
 	--secret-keyring ./unixvoid.sec --keyring ./unixvoid.pub \
-	--output nsproxy-latest-linux-amd64.aci.asc \
-	--detach-sig nsproxy-latest-linux-amd64.aci
+	--output unixvoid_blog-$GIT_HASH-linux-amd64.aci.asc \
+	--detach-sig unixvoid_blog.aci
