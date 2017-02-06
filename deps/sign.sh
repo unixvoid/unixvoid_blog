@@ -4,5 +4,5 @@
 	--batch --yes \
 	--no-default-keyring --armor \
 	--secret-keyring ./unixvoid.sec --keyring ./unixvoid.pub \
-	--output nsproxy-latest-linux-amd64.aci.asc \
-	--detach-sig nsproxy-latest-linux-amd64.aci
+	--output unixvoid_blog-latest-linux-amd64.aci.asc \
+	--detach-sig unixvoid_blog-latest-linux-amd64.aci
