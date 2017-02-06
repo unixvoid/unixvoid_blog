@@ -1,5 +1,5 @@
 #!/bin/bash
-GIT_HASH=$(shell git rev-parse HEAD | head -c 10)
+GIT_HASH=$(git rev-parse HEAD | head -c 10)
 
 echo $1 | gpg \
        --passphrase-fd 0 \
