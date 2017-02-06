@@ -65,7 +65,7 @@ travis_cp:
 	cp unixvoid.pub target/
 	cp unixvoid.sec target/
 	cd target/ && \
-		./sign.sh $GPG_SEC
+		./sign.sh $(GPG_SEC)
 
 clean:
 	rm -rf stage.tmp/
