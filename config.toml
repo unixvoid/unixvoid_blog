@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "/dev/null"
+title = "unixvoid"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
 theme = "mainroad"
@@ -13,7 +13,7 @@ theme = "mainroad"
 
 
 [Params]
-    subtitle = "path to the void"
+    subtitle = "Redefining infrastructure"
     description = "Open source infrastructure for the rest of us"
     opengraph = true
     leftsidebar = false
